@@ -10,7 +10,8 @@
   <script>
     addToOutput = function () {
       const input = document.getElementById("input").value;
-      document.getElementById("output").innerHTML.textContent = input;
+      document.getElementById("output").innerHTML = input;
+      document.getElementById("input").value = "";
     }
   </script>
 
