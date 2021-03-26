@@ -101,6 +101,11 @@ That is: removes all dashes, each word after dash becomes uppercased.
 
 // }
 
+/**
+ * 
+ * @param {*} str 
+ * @returns 
+ */
 function camelize(str) {
   return str
     .split('-') // splits 'my-long-word' into array ['my', 'long', 'word']
