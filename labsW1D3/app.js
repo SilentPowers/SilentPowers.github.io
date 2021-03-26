@@ -45,7 +45,7 @@ function Accumulator(initialValue, increment) {
 /**
  * @returns {Calculator} this is a constructor function
  */
-function Calculator(a, b) {
+function Calculator(a,b) {
 
   this.setValues = function (a, b) {
     this.a = a;
@@ -63,3 +63,6 @@ function Calculator(a, b) {
   }
 }
 
+const calc = new Calculator();
+calc.setValues(2,5);
+console.log(calc.sum());

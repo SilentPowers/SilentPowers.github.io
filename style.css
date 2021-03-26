@@ -18,3 +18,12 @@ a:active{
 a{
   color: #fff;
 }
+
+#box{
+  background: #333;
+  border: 2px #f4f4f4 solid;
+  width: 350px;
+  padding-top: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+}
