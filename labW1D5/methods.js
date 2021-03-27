@@ -1,8 +1,9 @@
 "use strict";
 /* eslint-disable */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator,sortByAge }; //add all of your function names here that you need for the node mocha tests
 
+/*module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculator,sortByAge }; //add all of your function names here that you need for the node mocha tests
+*/
 /*
 Implement the tasks in VSCode and run them with the arrayMethodsTests.js file.
  Add your own Mocha tests for the following tasks:
