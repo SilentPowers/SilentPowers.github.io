@@ -102,3 +102,6 @@ function includesEvenAge(arr) {
   })
   return includesEven;
 }
+
+const xy = alert("hi");
+console.log(xy)

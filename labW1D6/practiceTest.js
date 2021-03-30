@@ -124,12 +124,25 @@ if(a === b){
 }
 
 function sortThis(arr){
- arr.sort(function(a,b){
+ const sorted = arr.sort(function(a,b){
     return a - b;
   })
-  return arr;
+  return sorted;
 }
 
 
-console.log(arr33.sort(sortThis2))
+//console.log(arr33.sort(sortThis2))
 console.log(sortThis(arr33))
+
+
+//21
+/*
+a. Your function must be a pure function.
+b. You cannot use JavaScript’s filter method.
+c. The name will be myFilter.
+d. It will have two parameters. The first will be the array to filter. The
+second will be the filter function.
+e. Write a JS Doc comment that will pass our esLint rules.
+f. Test your function on this array [1, 2, 3, 4, 5]. Write a function that will
+allow you to use myFilter to filter the array for even numbers.
+*/
