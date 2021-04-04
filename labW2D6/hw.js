@@ -1,5 +1,4 @@
 "use strict";
-
 /*
 Write a function printNumbers(from, to) that outputs a number every second, 
 starting from from and ending with to.
@@ -25,11 +24,7 @@ function printNumbers(from, to) {
     current++;
   }, 1000);
 }
-
-//printNumbers(5, 15);
-//printNumbersNested(5, 15);
-//setTimeout(() => {clearInterval(printNumbers),console.log("end")},4000);
-
+/////////////////////////////////////////
 /**
  * 
  * @param {*} from num to start
@@ -47,13 +42,9 @@ function printNumbersNested(from, to) {
     current++;
   }, 1000);
 }
-
 /////////////////////////////////////////
-//Bank Object
-
-
-
-
+/////Bank Object
+/////////////////////////////////////////
 const bank = { transactionsDB: [], };
 bank.transactionsDB = [
   { customerId: 1, customerTransactions: [10, 50, -40] },
@@ -102,7 +93,6 @@ bank.saveTransaction = function (id, amount) {
 
   return amount;
 };
-//bank.saveTransaction(1, 100);
 
 
 /**
@@ -110,8 +100,6 @@ bank.saveTransaction = function (id, amount) {
  * @returns{*} object
  * closure heere and object is now private
  */
-
-
 const makeBank = (function(){
   const transactionsDB = [
     { customerId: 1, customerTransactions: [10, 50, -40] },
