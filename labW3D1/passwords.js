@@ -78,6 +78,7 @@ let group = {
     const self = this;
   self.students.forEach(function(student) {
     console.log(self.title + ": " + student);
+    //this was undefined because its a callback fcn, and in a regular fcn call, this is always undefined
   });
   }
  };
