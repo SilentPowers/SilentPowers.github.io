@@ -28,8 +28,8 @@ let user = {
 };
 
 //askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
-//ask fcn gets ok and fail fcns w/out the object, so in essence they are just refrences 
-// and "this" will be undefined.
+//ask fcn gets ok and fail fcns w/out the object because they are in an object,
+// so in essence they are just refrences  and "this" will be undefined.
 
 
 // The task is a little more complex variant of Fix a function that loses "this".
@@ -53,7 +53,36 @@ let user2 = {
   }
 };
 
-//partial function
+//partial function because it has args
 //askPassword2(user2.login.bind(user2, true) ,user2.login.bind(user2, false)); 
 
-module.exports = {askPassword, user, askPassword2, user2 }; //add all of your function names here that you need for the node mocha tests
+//using arrow fcn
+// let group = {
+//   title: "Our Group",
+//   students: ["John", "Pete", "Alice"],
+//   showList() {
+//   this.students.forEach((student) => {
+// //the arrow fcn will get its "this" from the group object
+//     console.log(this.title + ": " + student);
+//   });
+//   }
+//  };
+//  group.showList();
+
+
+//using bind method
+let group = {
+  title: "Our Group",
+  students: ["John", "Pete", "Alice"],
+  showList() {
+  this.students.forEach(function(student) {
+    console.log(this.title + ": " + student);
+  });
+  }
+ };
+ group.showList.bind(group);
+
+
+
+
+//module.exports = {askPassword, user, askPassword2, user2 }; //add all of your function names here that you need for the node mocha tests
