@@ -75,12 +75,13 @@ let group = {
   title: "Our Group",
   students: ["John", "Pete", "Alice"],
   showList() {
-  this.students.forEach(function(student) {
-    console.log(this.title + ": " + student);
+    const self = this;
+  self.students.forEach(function(student) {
+    console.log(self.title + ": " + student);
   });
   }
  };
- group.showList.bind(group);
+ group.showList();
 
 
 
