@@ -37,4 +37,4 @@ const him = new Teacher();
 him.initialize("Adam", 45);
 him.teach("Inheritance");
 
-module.exports ={Student, Teacher}
+//module.exports ={Student, Teacher}
