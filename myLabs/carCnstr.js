@@ -31,7 +31,7 @@ Car.call(this, make, speed)
 this.charge = charge;
 }
 
-//Link the prototypes
+//Link the prototypes in Constructor fcns
 EV.prototype = Object.create(Car.prototype);
 
 EV.prototype.chargeBattery = function(chargeTo){
