@@ -1,8 +1,8 @@
 "use strict";
 /* global Account  */
 
-// const acc = require("./account.js");//with node need the name of your file with your functions here
-// const Account = acc.Account;  //do this for all of the functions used in the Mocha tests
+const acc = require("./account.js");//with node need the name of your file with your functions here
+const Account = acc.Account;  //do this for all of the functions used in the Mocha tests
 /*eslint-disable*/
 /*
 Create a CheckingAccount class by extending Account. In addition to the attributes of an
@@ -36,7 +36,7 @@ class CheckingAccount extends Account {
       * @throws {Error} when the account has insufficient funds (balance)
       */
   withdraw(amount) {
- 
+ //probably need to call super(withdraw)
     if (amount <= 0) {
       throw new RangeError("Withdraw amount has to be greater than zero");
     }
@@ -62,5 +62,5 @@ class CheckingAccount extends Account {
 
 
 /* exports at end of file since exporting an object, which can only be referenced after definition   */
-//exports.CheckingAccount = CheckingAccount;
+exports.CheckingAccount = CheckingAccount;
 

@@ -79,7 +79,7 @@ quiz.getAverage = function () {
   let numOfStudents = 0;
   let i = 10;
   while (i <= 12) {
-    totalCorrect = totalCorrect + quiz.scoreStudent(i);
+    totalCorrect = totalCorrect + this.scoreStudent(i);
     numOfStudents++;
     i++;
   }
@@ -89,7 +89,17 @@ quiz.getAverage = function () {
 
 
 
+/*
+quiz.getAverage = function(){
+    let total = 0;
+    for (const student of this.students){
+        total += this.scoreStudent(student.sid);
+    }
+    return total/this.students.length;
 
+};
+
+*/
 
 
 

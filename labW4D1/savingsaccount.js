@@ -1,8 +1,8 @@
 "use strict";
 /*eslint-disable*/
 /* global Account require  */
-// const acc = require("./account.js");//with node need the name of your file with your functions here
-// const Account = acc.Account;  //do this for all of the functions used in the Mocha tests
+const acc = require("./account.js");//with node need the name of your file with your functions here
+const Account = acc.Account;  //do this for all of the functions used in the Mocha tests
 
 
 // Extend the Account class by creating a class called SavingsAccount in a file called
@@ -34,16 +34,13 @@ class SavingsAccount extends Account {
        * @throws {RangeError} when amount is less than or equal to zero
        */
   deposit(amount) {
-    if (amount <= 0) {
-      throw new RangeError("Deposit amount has to be greater than zero");
-    }
-    this._balance += amount;
-  }
-
+  super.deposit();
+  }  
   addInterest() {
     const amount = this._balance * this.interest / 100;
     this.deposit(amount)
   }
+}
   
   /**
    * @returns {string} representation of this account
@@ -51,7 +48,7 @@ class SavingsAccount extends Account {
   // toString() {
   //   return "Account " + this._number + ": balance " + this._balance;
   // }
-}
+
 
 // const save = new SavingsAccount(1000, 7);
 
@@ -61,4 +58,4 @@ class SavingsAccount extends Account {
 
 /* exports at end of file since exporting an object, which can only be referenced after definition   */
 /* global exports */
-//exports.SavingsAccount = SavingsAccount;
+exports.SavingsAccount = SavingsAccount;
